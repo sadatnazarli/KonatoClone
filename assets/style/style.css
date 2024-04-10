@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.menu {
+  background-color: #004274;
+  height: 70px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  float: left;
+  height: 50px;
+  line-height: 65px;
+  padding: 0 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
