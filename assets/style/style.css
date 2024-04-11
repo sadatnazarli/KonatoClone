@@ -177,10 +177,7 @@
 .image-text h1 {
   font-size: 3.5em;
 }
-.image-text h2 {
-  font-size: 2.5em;
-}
-.image-text h1,
+.image-text .image-text h1,
 .image-text p,
 .image-text h2,
 .image-text button {
@@ -234,29 +231,89 @@
 .image-text button:hover:after {
   top: 0;
 }
-.property-listing {
-  width: 100%;
+.properties-container {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  overflow: auto;
+}
+.properties-heading {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 30px;
 }
 
-.property {
-  width: 30%;
-  margin-bottom: 20px;
+.properties-heading h2 {
+  color: #004274;
+  margin-bottom: 10px;
+  font-size: 24px;
 }
 
-.property img {
+.properties-heading p {
+  color: #666;
+  font-size: 18px;
+}
+
+.property-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.property-card img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
-.property h2,
-.property h3 {
-  margin: 0;
+.property-info {
+  padding: 15px;
+  text-align: center;
 }
 
-.property p {
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.type {
+  font-size: 18px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.description {
+  font-size: 14px;
+  color: #999;
   margin: 10px 0;
+}
+
+.features {
+  font-size: 14px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.features span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.view-property {
+  background-color: #004274;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.view-property:hover {
+  background-color: #00aeff;
 }
