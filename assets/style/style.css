@@ -175,24 +175,62 @@
 }
 
 .image-text h1 {
-  font-size: 2em;
+  font-size: 3.5em;
 }
-
-.image-text button {
-  background-color: blue;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+.image-text h2 {
+  font-size: 2.5em;
 }
 .image-text h1,
 .image-text p,
 .image-text h2,
 .image-text button {
   margin-bottom: 20px;
+}
+
+.image-text button {
+  display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 46px;
+  text-decoration: none;
+  text-align: center;
+  border: 3px solid #00aeff;
+  color: #00aeff;
+  font-size: 20px;
+  font-family: arial;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  text-transform: uppercase;
+  transition: all 0.35s;
+}
+
+.image-text button:before,
+.image-text button:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  background: #00aeff;
+  z-index: -1;
+  transition: all 0.35s;
+}
+
+.image-text button:before {
+  opacity: 0.5;
+}
+
+.image-text button:after {
+  transition-delay: 0.2s;
+}
+
+.image-text button:hover {
+  color: #fff;
+}
+
+.image-text button:hover:before,
+.image-text button:hover:after {
+  top: 0;
 }
