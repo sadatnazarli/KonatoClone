@@ -255,7 +255,6 @@
   color: #666;
   font-size: 18px;
 }
-
 .property-card {
   background-color: white;
   border-radius: 10px;
@@ -272,31 +271,32 @@
 
 .property-info {
   padding: 15px;
-  text-align: center;
+  text-align: left;
 }
 
 .price {
   font-size: 20px;
   font-weight: bold;
   color: #333;
+  margin-bottom: 10px;
 }
 
 .type {
   font-size: 18px;
   color: #666;
-  margin: 5px 0;
+  margin-bottom: 10px;
 }
 
 .description {
   font-size: 14px;
   color: #999;
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 
 .features {
   font-size: 14px;
   color: #333;
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 
 .features span {
@@ -309,11 +309,24 @@
   color: white;
   border: none;
   padding: 10px 20px;
-  margin-top: 10px;
   cursor: pointer;
   border-radius: 5px;
+  width: 100%;
+  text-align: center;
 }
 
 .view-property:hover {
   background-color: #00aeff;
+}
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.property-card {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  scroll-snap-align: start;
 }
