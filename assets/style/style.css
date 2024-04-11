@@ -234,3 +234,29 @@
 .image-text button:hover:after {
   top: 0;
 }
+.property-listing {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.property {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.property img {
+  width: 100%;
+  height: auto;
+}
+
+.property h2,
+.property h3 {
+  margin: 0;
+}
+
+.property p {
+  margin: 10px 0;
+}
