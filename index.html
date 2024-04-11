@@ -14,22 +14,64 @@
     <link rel="stylesheet" href="./assets/style/style.css" />
   </head>
   <body>
-    <div class="main-menu d-none d-lg-block">
-      <nav>
+    <header class="header">
+      <nav class="main-menu">
         <ul id="navigation">
           <li><a href="index.html">Home</a></li>
           <li><a href="property.html">Property</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li class="header-right-btn">
-            <a href="#" class="header-btn2">
-              Call Us: <span>+10 (78) 356 3276</span>
-            </a>
-            <a href="login.html" class="btn_1">Sign In</a>
-          </li>
         </ul>
+        <div class="header-contact">
+          <a href="tel:+10783563276" class="header-phone"
+            >Call Us: +10 (78) 356 3276</a
+          >
+          <a href="login.html" class="btn btn-signin">Sign In</a>
+        </div>
       </nav>
+    </header>
+    <div class="search-area">
+      <div class="input-container">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Enter Keyword..." name="search" />
+      </div>
+      <div class="custom-select" id="rent-select">
+        <div class="select-selected">
+          <span>Select Rent</span>
+        </div>
+        <div class="select-items select-hide">
+          <div>Rent1</div>
+          <div>Rent2</div>
+        </div>
+      </div>
+      <div class="custom-select" id="beds-select">
+        <div class="select-selected">
+          <span class="fa-solid fa-bed"></span>
+          <span>Select Bed</span>
+        </div>
+        <div class="select-items select-hide">
+          <div><span class="fa-solid fa-bed"></span> 1 Bed</div>
+          <div><span class="fa-solid fa-bed"></span> 2 Beds</div>
+          <div><span class="fa-solid fa-bed"></span> 3 Beds</div>
+        </div>
+      </div>
+      <div class="custom-select" id="baths-select">
+        <div class="select-selected">
+          <span class="fa-solid fa-bath"></span>
+          <span>Select Bath</span>
+        </div>
+        <div class="select-items select-hide">
+          <div><span class="fa-solid fa-bath"></span> 1 Bath</div>
+          <div><span class="fa-solid fa-bath"></span> 2 Baths</div>
+          <div><span class="fa-solid fa-bath"></span> 3 Baths</div>
+        </div>
+      </div>
+      <button type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i> Search
+      </button>
     </div>
+
+    <script src="./assets/script.js"></script>
   </body>
 </html>
