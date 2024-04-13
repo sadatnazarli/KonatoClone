@@ -432,8 +432,9 @@ margin: -10px;
   background-color: #F2F4F8;
   padding: 40px 0;
   display: flex;
+  gap: 150px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .explore-section .content {
@@ -443,7 +444,7 @@ margin: -10px;
 
 .explore-section h2 {
   color: #333;
-  font-size: 2rem;
+  font-size: 2.5rem; 
   margin-bottom: 10px;
 }
 
@@ -456,7 +457,7 @@ margin: -10px;
   display: inline-block;
   background-color: #00A0EB;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 24px;
   margin-bottom: 30px;
   border-radius: 5px;
   text-align: center;
@@ -468,26 +469,44 @@ margin: -10px;
 }
 
 .property-types {
+  
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
   max-width: 50%;
-  justify-content: flex-start;
+  justify-content: center;
+  margin: 5%; 
 }
 
 .property-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: white;
+  padding: 20px;
+  border: 1px solid #d6d6d6;
+  border-radius: 3px;
+  transition: transform 0.2s, filter 0.2s, opacity 0.2s;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
 }
 
 .property-item i {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 10px;
 }
 
 .property-item p {
   text-align: center;
+  font-size: 1.2rem; 
+}
+.property-types:hover .property-item {
+  filter: blur(3px);
+  opacity: 0.5;
+  transform: scale(0.98);
+  box-shadow: none;
+}
+.property-types .property-item:hover {
+  transform: scale(1);
+  filter: blur(0px);
+  opacity: 1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.125);
 }
 
 @media (max-width: 768px) {
