@@ -421,3 +421,10 @@ margin: -10px;
     margin-bottom: 20px;
   }
 }
+.second{
+  text-align: center;
+  margin-top: 70px;
+  h1{
+    font-size: xx-large;
+  }
+}
