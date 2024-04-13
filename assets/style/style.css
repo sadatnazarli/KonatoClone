@@ -428,3 +428,80 @@ margin: -10px;
     font-size: xx-large;
   }
 }
+.explore-section {
+  background-color: #F2F4F8;
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.explore-section .content {
+  text-align: left;
+  max-width: 50%;
+}
+
+.explore-section h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.explore-section p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #00A0EB;
+  color: white;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #008dcf;
+}
+
+.property-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 50%;
+  justify-content: flex-start;
+}
+
+.property-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.property-item i {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.property-item p {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .explore-section {
+    flex-direction: column;
+  }
+
+  .explore-section .content,
+  .property-types {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .property-types {
+    justify-content: center;
+  }
+}
