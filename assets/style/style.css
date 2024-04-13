@@ -349,3 +349,75 @@ p{
     right: 10px;
   }
 }
+.help-section {
+  margin-top: 50px;
+  background: url('https://linkplay.co/image/solutions/homeaudio/roxanne-joncas-582452-unsplash-1920x540-overlay.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.service-boxes {
+  display: flex;
+  justify-content: center; 
+  align-items: stretch; 
+margin: -10px;
+}
+
+.service-box {
+  background-color: #00A0EB; 
+  padding: 20px; 
+  margin: 10px; 
+  flex-basis: calc(33.333% - 20px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  color: white; 
+  transition: transform 0.3s ease; 
+}
+
+.service-box:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+}
+
+
+
+.service-box i {
+  font-size: 4rem; 
+  margin-bottom: 15px; 
+  color: white; 
+}
+.service-icon {
+  max-width: 100px;
+  margin-bottom: 10px;
+}
+
+.service-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 960px) {
+  .service-boxes {
+    flex-direction: column;
+  }
+  
+  .service-box {
+    margin-bottom: 20px;
+  }
+}
