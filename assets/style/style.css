@@ -249,17 +249,16 @@ p{
 .slider-wrapper {
   display: flex;
   align-items: center;
-  overflow: hidden;
   position: relative;
+  margin: 0 20px; 
 }
 
 .image-list {
   display: flex;
   overflow-x: auto;
-  scrollbar-width: none; 
-  padding: 20px 0;
+  padding: 20px 40px; 
   align-items: center;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .image-list::-webkit-scrollbar {
@@ -267,47 +266,50 @@ p{
 }
 
 .image-item {
-  flex: 0 0 auto; 
-  width: 425px; 
-  /* height: 400px; */
+  flex: 0 0 auto;
+  width: 425px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  object-fit: cover; 
 }
 
 .property-info {
-  text-align: left; /* Left align all property info */
-  width: 100%; /* Use full width of its container */
+  text-align: left;
+  /* width: 100%; */
 }
-
-.property-info > * {
-  margin-bottom: 5px; 
+.property-info hr {
+  width: calc(100% + 20px); 
+  margin-left: -10px; 
+  border: 0;
+  height: 1px;
+  background-color: #eaeaea; 
+  margin-top: 20px; 
+  margin-bottom: 20px; 
 }
-
-.hr {
-  width: 100%; 
-  border-top: 1px solid #ccc;
-  margin: 10px 0; 
+.price, .type, .description, .features {
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
-
-.price {
+.price{
   color: blue;
   font-size: 20px;
 }
-
-.type {
-  font-weight: bold;
-  font-size: 18px;
+.type{
+  font-weight: bolder;
 }
-
-.description, .features {
-  font-size: 16px; 
+.fa-chevron-left, .fa-chevron-right {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  color: #000;
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none; 
+  transform: translateY(-50%);
 }
-
 .features{
   display: flex;
   justify-content: space-between;
@@ -315,19 +317,35 @@ p{
     font-weight: lighter;
   }
 }
+/* .hr {
+  width: 100%; 
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+} */
 
+.fa-chevron-left {
+  left: -20px; 
+}
 
+.fa-chevron-right {
+  right: -20px; 
+}
 @media only screen and (max-width: 1023px) {
-  .slide-button { display: block; }
+  .slider-wrapper {
+    margin: 0; 
+  }
 
-  .image-list { gap: 10px; }
+  .image-list {
+    padding: 20px 20px; 
+  }
 
   .image-item {
     width: 100%; 
-    height: auto; 
   }
 
-  .property-info { 
-    padding: 5px; 
+  .fa-chevron-left, .fa-chevron-right {
+    font-size: 20px; 
+    left: 10px; 
+    right: 10px;
   }
 }
