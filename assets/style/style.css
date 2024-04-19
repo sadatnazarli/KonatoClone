@@ -447,26 +447,23 @@ margin: -10px;
   background-color: #F2F4F8;
   padding: 40px 0;
   display: flex;
-  gap: 150px;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-around; /* Space out the main title and the property types */
+  align-items: center; /* Center align the items vertically */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .explore-section .content {
-  text-align: left;
-  max-width: 50%;
+  flex-basis: 40%; /* Allocate width to the content */
+  max-width: 40%; /* Prevent the content from exceeding its allocated width */
+  text-align: center; /* Center text for the title and description */
 }
 
-.explore-section h2 {
-  color: #333;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
 
+.explore-section h2,
 .explore-section p {
-  color: #666;
   margin-bottom: 20px;
 }
+
 
 .btn {
   display: inline-block;
@@ -518,28 +515,21 @@ margin: -10px;
 
 
 
-.property-types {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  max-width: 50%;
-  justify-content: center;
-  margin: 5%;
+.explore-section .property-types {
+  flex-basis: 50%; /* Allocate width to the property types */
+  max-width: 50%; /* Prevent the property types from exceeding their allocated width */
+  display: grid; /* Use grid for internal items */
+  grid-template-columns: repeat(4, 1fr); /* Create four columns for items */
+  gap: 20px; /* Space between grid items */
+  justify-content: center; /* Center grid items */
 }
 
+
 .property-item {
-  background: white;
-  padding: 20px;
-  width: 200px; 
-  height: 250px; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #d6d6d6;
-  border-radius: 3px;
-  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  text-align: center; /* Center text and icons within each property item */
+  padding: 20px; /* Add padding for spacing */
+  border: 1px solid #d6d6d6; /* Border for definition */
+  border-radius: 3px; /* Rounded corners */
 }
 
 .property-item i {
@@ -558,24 +548,25 @@ margin: -10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .explore-section {
-    flex-direction: column;
-  }
-
-  .explore-section .content,
-  .property-types {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .property-types {
     justify-content: center;
   }
 
+  .explore-section .content,
+  .explore-section .property-types {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .explore-section .property-types {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Auto-fit grid items on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
   .property-item {
-    width: 100%; 
-    height: auto; 
+    padding: 10px; /* Reduce padding on smaller screens */
   }
 }
 .context-agent {
